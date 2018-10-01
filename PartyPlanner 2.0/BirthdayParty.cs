@@ -43,7 +43,6 @@
             }
         }
 
-
         public BirthdayParty(int numberOfPeople, bool fancyDecorations, string cakeWriting)
         {
             NumberOfPeople = numberOfPeople;
