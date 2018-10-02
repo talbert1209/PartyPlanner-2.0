@@ -2,6 +2,7 @@
 {
     public class DinnerParty
     {
+        //Test Change
         private const int CostOfFoodPerPerson = 25;
         public int NumberOfPeople { get; set; }
         public bool FancyDecorations { get; set; }
