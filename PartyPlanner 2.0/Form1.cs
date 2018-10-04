@@ -29,17 +29,20 @@ namespace PartyPlanner_2._0
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            dinnerParty.NumberOfPeople = Convert.ToInt32(numericUpDown1.Value);
+            DisplayDinnerPartyCost();
         }
 
         private void fancyBox_CheckedChanged(object sender, EventArgs e)
         {
-
+            dinnerParty.FancyDecorations = fancyBox.Checked;
+            DisplayDinnerPartyCost();
         }
 
         private void healthyBox_CheckedChanged(object sender, EventArgs e)
         {
-
+            dinnerParty.HealthyOption = healthyBox.Checked;
+            DisplayDinnerPartyCost();
         }
 
         private void costLabel_Click(object sender, EventArgs e)
