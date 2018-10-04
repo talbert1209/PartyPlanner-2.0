@@ -16,7 +16,8 @@
                 {
                     totalCost *= .95M;
                 }
-
+                if (NumberOfPeople >= 100)
+                    totalCost += 100M;
                 return totalCost;
             }
         }

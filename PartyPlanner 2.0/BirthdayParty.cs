@@ -39,6 +39,8 @@
                     cakeCost = 40M + ActualLength * .25M;
                 else
                     cakeCost = 75M + ActualLength * .25M;
+                if (NumberOfPeople >= 100)
+                    totalCost += 100M;
                 return totalCost + cakeCost;
             }
         }

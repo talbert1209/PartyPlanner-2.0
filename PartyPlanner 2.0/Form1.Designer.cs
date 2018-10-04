@@ -199,6 +199,7 @@
             this.cakeWriting.Size = new System.Drawing.Size(208, 22);
             this.cakeWriting.TabIndex = 5;
             this.cakeWriting.Text = "Happy Birthday";
+            this.cakeWriting.TextChanged += new System.EventHandler(this.cakeWriting_TextChanged);
             // 
             // tooLongLabel
             // 
@@ -228,13 +229,20 @@
             this.fancyBirthday.TabIndex = 2;
             this.fancyBirthday.Text = "Fancy Decorations";
             this.fancyBirthday.UseVisualStyleBackColor = true;
+            this.fancyBirthday.CheckedChanged += new System.EventHandler(this.fancyBirthday_CheckedChanged);
             // 
             // numberBirthday
             // 
             this.numberBirthday.Location = new System.Drawing.Point(19, 39);
+            this.numberBirthday.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.numberBirthday.Name = "numberBirthday";
             this.numberBirthday.Size = new System.Drawing.Size(120, 22);
             this.numberBirthday.TabIndex = 1;
+            this.numberBirthday.ValueChanged += new System.EventHandler(this.numberBirthday_ValueChanged);
             // 
             // label3
             // 
