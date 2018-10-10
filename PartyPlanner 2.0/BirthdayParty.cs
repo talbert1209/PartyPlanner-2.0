@@ -1,10 +1,7 @@
 ﻿namespace PartyPlanner_2._0
 {
-    public class BirthdayParty
+    public class BirthdayParty : Party
     {
-        public const int CostOfFoodPerPerson = 25;
-        public int NumberOfPeople { get; set; }
-        public bool FancyDecorations { get; set; }
         public string CakeWriting { get; set; }
         private int ActualLength
         {
@@ -28,12 +25,11 @@
             }
         }
 
-        public decimal Cost
+        public override decimal Cost
         {
             get
             {
-                decimal totalCost = CalculateCostOfDecorations();
-                totalCost += CostOfFoodPerPerson * NumberOfPeople;
+                decimal totalCost = base.Cost;
                 decimal cakeCost;
                 if (CakeSize() == 8)
                     cakeCost = 40M + ActualLength * .25M;
@@ -50,16 +46,6 @@
             NumberOfPeople = numberOfPeople;
             FancyDecorations = fancyDecorations;
             CakeWriting = cakeWriting;
-        }
-
-        private decimal CalculateCostOfDecorations()
-        {
-            decimal costOfDecorations;
-            if (FancyDecorations)
-                costOfDecorations = (NumberOfPeople * 15.00M) + 50.00M;
-            else
-                costOfDecorations = (NumberOfPeople * 7.50M) + 30.00M;
-            return costOfDecorations;
         }
 
         private int CakeSize()
